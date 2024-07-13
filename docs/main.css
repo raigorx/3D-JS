@@ -1,0 +1,93 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  display: flex;
+  background-color: #000;
+  color: #fff;
+  font-size: 24px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#glCanvas {
+  width: 360px;
+  height: 598px;
+  /* width: 100%; */
+  /* min-height: 500px; */
+}
+
+.container {
+  display: flex;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+  justify-items: center;
+  align-items: center;
+  margin-top: 2px;
+  width: 100%;
+  padding: 0 2px;
+}
+
+.incDecContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 22px;
+  background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #d7d7d7 0,
+    #353535 100%
+  );
+}
+
+button {
+  color: #fff;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  font-size: inherit;
+  /* background-image: radial-gradient(
+    100% 100% at 100% 0,
+    #d7d7d7 0,
+    #353535 100%
+  ); */
+  border: 0;
+  height: 48px;
+  padding-left: 10px;
+  padding-right: 10px;
+  transition: font-size 0.3s ease;
+}
+
+.label {
+  border-radius: 22px 0 0 22px;
+  padding-left: 18px;
+}
+
+.plus {
+  border-radius: 0 22px 22px 0;
+}
+
+.minus:active,
+.plus:active {
+  font-size: 32px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  button:active {
+    background-color: #b1b0b0;
+  }
+}

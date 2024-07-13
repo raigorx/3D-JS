@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebGL Frustum</title>
+    <link rel="stylesheet" href="../../main.css" />
+  </head>
+  <body>
+    <canvas id="glCanvas"></canvas>
+    <div class="container">
+      <div class="incDecContainer">
+        <div class="label">FOV</div>
+        <button
+          class="minus"
+          onpointerdown="FOVButton.start(-1)"
+          onpointerup="FOVButton.stop()"
+          onpointerleave="FOVButton.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="fovDisplay"></div>
+        <button
+          class="plus"
+          onpointerdown="FOVButton.start(1)"
+          onpointerup="FOVButton.stop()"
+          onpointerleave="FOVButton.stop()"
+        >
+          +
+        </button>
+      </div>
+      <div class="incDecContainer">
+        <div class="label">zNear</div>
+        <button
+          class="minus"
+          onpointerdown="zNearButton.start(-1)"
+          onpointerup="zNearButton.stop()"
+          onpointerleave="zNearButton.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="zNearDisplay"></div>
+        <button
+          class="plus"
+          onpointerdown="zNearButton.start(1)"
+          onpointerup="zNearButton.stop()"
+          onpointerleave="zNearButton.stop()"
+        >
+          +
+        </button>
+      </div>
+      <div class="incDecContainer">
+        <div class="label">zFar</div>
+        <button
+          class="minus"
+          onpointerdown="zFar.start(-1)"
+          onpointerup="zFar.stop()"
+          onpointerleave="zFar.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="zFarDisplay"></div>
+        <button
+          class="plus"
+          onpointerdown="zFar.start(1)"
+          onpointerup="zFar.stop()"
+          onpointerleave="zFar.stop()"
+        >
+          +
+        </button>
+      </div>
+      <div class="incDecContainer">
+        <div class="label">zPos</div>
+        <button
+          class="minus"
+          onpointerdown="zPosition.start(-1)"
+          onpointerup="zPosition.stop()"
+          onpointerleave="zPosition.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="zPositionDisplay">1</div>
+        <button
+          class="plus"
+          onpointerdown="zPosition.start(1)"
+          onpointerup="zPosition.stop()"
+          onpointerleave="zPosition.stop()"
+        >
+          +
+        </button>
+      </div>
+      <div class="incDecContainer">
+        <div class="label">cameraX</div>
+        <button
+          class="minus"
+          onpointerdown="cameraAngleX.start(-1)"
+          onpointerup="cameraAngleX.stop()"
+          onpointerleave="cameraAngleX.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="cameraAngleXDisplay">1</div>
+        <button
+          class="plus"
+          onpointerdown="cameraAngleX.start(1)"
+          onpointerup="cameraAngleX.stop()"
+          onpointerleave="cameraAngleX.stop()"
+        >
+          +
+        </button>
+      </div>
+      <div class="incDecContainer">
+        <div class="label">cameraY</div>
+        <button
+          class="minus"
+          onpointerdown="cameraAngleY.start(-1)"
+          onpointerup="cameraAngleY.stop()"
+          onpointerleave="cameraAngleY.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="cameraAngleYDisplay">1</div>
+        <button
+          class="plus"
+          onpointerdown="cameraAngleY.start(1)"
+          onpointerup="cameraAngleY.stop()"
+          onpointerleave="cameraAngleY.stop()"
+        >
+          +
+        </button>
+      </div>
+      <div class="incDecContainer">
+        <div class="label">cameraZ</div>
+        <button
+          class="minus"
+          onpointerdown="cameraAngleZ.start(-1)"
+          onpointerup="cameraAngleZ.stop()"
+          onpointerleave="cameraAngleZ.stop()"
+        >
+          -
+        </button>
+        <div class="display" id="cameraAngleZDisplay">1</div>
+        <button
+          class="plus"
+          onpointerdown="cameraAngleZ.start(1)"
+          onpointerup="cameraAngleZ.stop()"
+          onpointerleave="cameraAngleZ.stop()"
+        >
+          +
+        </button>
+      </div>
+    </div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
